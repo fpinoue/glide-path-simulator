@@ -11,7 +11,8 @@ import {
 
 function fmtYAxis(v) {
   if (v === 0) return '0';
-  return `${(v / 10000).toFixed(1)}億`;
+  // 目盛りが 0.25億刻みになることがあるため小数第2位まで出し、末尾の0は落とす（0.25億・0.5億・1億）
+  return `${parseFloat((v / 10000).toFixed(2))}億`;
 }
 
 function CustomTooltip({ active, payload, label }) {
