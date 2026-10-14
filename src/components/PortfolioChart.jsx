@@ -71,7 +71,7 @@ export default function PortfolioChart({ timeline, planLabel, newFundLabel }) {
           <Tooltip content={<CustomTooltip />} />
           <Legend
             verticalAlign="top"
-            formatter={(value) => (value === 'equity' ? '株式ファンド（NISA）' : `${fundName}（NISA）`)}
+            formatter={(value) => (value === 'equity' ? '株式ファンド' : fundName)}
             wrapperStyle={{ fontSize: 13, paddingBottom: 8 }}
           />
           <Bar dataKey="equity" name="equity" stackId="a" fill="#3b82f6" radius={[0, 0, 0, 0]} />
